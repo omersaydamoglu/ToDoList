@@ -75,9 +75,8 @@ Detailed resource, time, and member planning is provided in the attached Excel d
 
 ---
 
-## 📊 UML Diagram
-
-The UML diagram for the To-Do List system (Use Case / Class Diagram) is included in this repository.
+## UML Diagramı
+![UML Şeması](uml-diagram.png.jpeg)
 
 ---
 
