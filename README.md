@@ -16,8 +16,8 @@ In addition to software development, this project demonstrates teamwork, project
 
 ## 👥 Group Members & Roles
 
-- Ömer Saydamoğlı – Project Manager & Backend Developer  
-- Nazlım Aynacı – Frontend Developer & UI/UX Designer  
+- Ömer Saydamoğlı – Project Manager & Frontend Developer
+- Nazlım Aynacı – Backend Developer
 - Talha Soydaş – System Analyst & Integration Developer  
 
 ---
