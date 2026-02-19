@@ -103,7 +103,7 @@ All task distribution, sprint planning, and progress tracking are managed via Ji
 
 ## 💰 Budget & Resource Planning
 
-[Proje Planı Excel Dosyası İçin Tıklayın]https://github.com/omersaydamoglu/ToDoList/blob/main/project%20planning.xlsx
+[Proje Planı Excel Dosyası İçin Tıklayın](https://github.com/omersaydamoglu/ToDoList/blob/main/project%20planning.xlsx)
 
 ### 👨‍💻 Team Members
 3 Members
