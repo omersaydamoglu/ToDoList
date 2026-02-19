@@ -51,14 +51,53 @@ All task distribution, sprint planning, and progress tracking are managed via Ji
 
 ## 🗓 Project Timeline
 
-| Week | Activities |
-|------|------------|
-| Week 1 | Project planning & requirement analysis |
-| Week 2 | UML diagram & system design |
-| Week 3 | Frontend development |
-| Week 4 | Backend logic implementation |
-| Week 5 | Testing & integration |
-| Week 6 | Final revisions & submission |
+🗓 Week 1 – Planning & Setup
+	•	Project idea finalization
+	•	Role distribution
+	•	Jira setup
+	•	Git repository creation on GitHub
+	•	Project structure planning
+
+⸻
+
+🗓 Week 2 – Backend Foundation
+	•	Spring Boot project setup
+	•	Database configuration (MySQL)
+	•	Entity classes (User, Task)
+	•	Repository layer implementation
+
+⸻
+
+🗓 Week 3 – Backend Development
+	•	CRUD API development
+	•	Login & Register endpoints
+	•	Basic authentication setup
+	•	API testing with Postman
+
+⸻
+
+🗓 Week 4 – Frontend Development
+	•	UI design
+	•	Login/Register pages
+	•	Task list page
+	•	Connecting frontend to backend APIs
+
+⸻
+
+🗓 Week 5 – Integration & Testing
+	•	Frontend–Backend integration
+	•	System testing
+	•	Bug fixing
+	•	Jira issue tracking updates
+
+⸻
+
+🗓 Week 6 – Finalization & Submission
+	•	Final testing
+	•	UML diagram completion
+	•	Documentation writing
+	•	Final upload to GitHub
+	•	Submission on UBIS
 
 ---
 
