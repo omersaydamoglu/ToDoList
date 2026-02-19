@@ -31,6 +31,9 @@ In addition to software development, this project demonstrates teamwork, project
 - Jira (Task Management)  
 - Google Teams (Communication)  
 - Draw.io / PlantUML (UML Diagram)
+-  Spring Boot 
+-  MySQL (Database)
+-  Hibernate (JPA)
 
 ---
 
