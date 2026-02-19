@@ -61,6 +61,8 @@ All task distribution, sprint planning, and progress tracking are managed via Ji
 
 ## 💰 Budget & Resource Planning
 
+[Proje Planı Excel Dosyası İçin Tıklayın](project-planning.xlsx.xlsx)
+
 ### 👨‍💻 Team Members
 3 Members
 
