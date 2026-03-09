@@ -136,3 +136,19 @@ The GitHub repository link has been shared with the instructor via UBIS.
 ## 📄 License
 
 This project is developed for educational purposes.
+
+## 📊 Project Analysis
+
+For the project evaluation assignment, a detailed project analysis document was created.
+
+This document includes:
+
+- ⚠️ Risk Analysis  
+- 📉 Risk Assessment  
+- 🛡 Risk Mitigation  
+- 📋 Validation and Testing Plan  
+- ✅ Success Criteria  
+
+You can access the full document here:
+
+👉 [Project Analysis Document](project-analysis.md)
