@@ -1,0 +1,53 @@
+package com.nazlim.test2todolist.controllers;
+
+import com.nazlim.test2todolist.dto.TodoRequest;
+import com.nazlim.test2todolist.dto.TodoResponse;
+import com.nazlim.test2todolist.services.TodoService;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+@CrossOrigin(origins = "http://localhost:63342")
+@RestController
+@RequestMapping("/api/todos")
+public class TodoController {
+
+    private final TodoService service;
+
+    public TodoController(TodoService service) {
+        this.service = service;
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public TodoResponse create(@Valid @RequestBody TodoRequest req) {
+        return service.create(req);
+    }
+
+    @GetMapping
+    public List<TodoResponse> getAll() {
+        return service.getAll();
+    }
+
+    @GetMapping("/get/{id}")
+    public TodoResponse getById(@PathVariable Long id) {
+        return service.getById(id);
+    }
+
+    @PutMapping("/update/{id}")
+    public TodoResponse update(@PathVariable Long id, @Valid @RequestBody TodoRequest req) {
+        return service.update(id, req);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) {
+        service.delete(id);
+    }
+
+    @GetMapping("/status/{completed}")
+    public List<TodoResponse> byStatus(@PathVariable boolean completed) {
+        return service.getByStatus(completed);
+    }
+}
