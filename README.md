@@ -120,7 +120,7 @@ Detailed resource, time, and member planning is provided in the attached Excel d
 ---
 
 ## UML Diagramı
-![UML Şeması](uml-diagram.png.jpeg)
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/3bd43b7d-f7a2-4b6d-863f-01dece1f8e91" />
 
 ---
 
