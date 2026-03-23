@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🌿 Yapılacaklar</h1>
+
+    <div class="todo-input">
+        <input type="text" id="title" placeholder="Başlık">
+        <input type="text" id="description" placeholder="Açıklama">
+
+        <select id="priority">
+            <option value="LOW">Düşük</option>
+            <option value="MEDIUM">Orta</option>
+            <option value="HIGH">Yüksek</option>
+        </select>
+
+        <input type="date" id="date">
+
+        <button onclick="addTodo()">+</button>
+    </div>
+
+    <div id="todoList"></div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h3>Görev Güncelle</h3>
+
+        <input type="text" id="editTitle">
+        <input type="text" id="editDesc">
+
+        <button onclick="saveUpdate()">Kaydet</button>
+        <button onclick="closeModal()">İptal</button>
+    </div>
+</div>
+
+<script src="todos.js"></script>
+
+</body>
+</html>

@@ -4,7 +4,7 @@ import com.nazlim.test2todolist.dto.*;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin(origins = "http://localhost:63342")
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
