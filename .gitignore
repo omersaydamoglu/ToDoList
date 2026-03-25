@@ -1,0 +1,8 @@
+target/
+.idea/
+__MACOSX/
+.DS_Store
+*.class
+*.log
+*.iml
+.env
