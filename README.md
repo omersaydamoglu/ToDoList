@@ -159,3 +159,15 @@ Although Jira was initially planned for task management, the team managed tasks 
 Sprint planning and progress tracking were handled through regular communication and predefined weekly milestones.
 
 The project timeline above reflects the sprint structure followed during development.
+## 🎬 Demo Plan
+
+The live demo of the project will include the following steps:
+
+1. User Registration  
+2. User Login  
+3. Adding a new task  
+4. Updating a task  
+5. Deleting a task  
+6. Marking a task as completed  
+7. Showing GitHub repository  
+8. Showing CI/CD pipeline  
