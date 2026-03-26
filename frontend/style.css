@@ -1,0 +1,513 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-main: #f6efe5;
+    --bg-card: #f2ede7;
+    --bg-input: #ead9b8;
+    --border: #d9b677;
+
+    --primary-dark: #a92d00;
+    --primary: #d95c04;
+    --primary-light: #e0a100;
+
+    --text-dark: #4f2f1d;
+    --text-soft: #8a6547;
+    --white: #ffffff;
+
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --radius-xl: 30px;
+    --radius-lg: 22px;
+    --radius-md: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-main);
+    color: var(--text-dark);
+}
+
+/* AUTH PAGES */
+.auth-body {
+    min-height: 100vh;
+    background: var(--bg-main);
+}
+
+.auth-page {
+    min-height: 100vh;
+}
+
+.auth-top {
+    height: 280px;
+    position: relative;
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--primary-light));
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.auth-header h1 {
+    font-size: 52px;
+    margin-bottom: 12px;
+}
+
+.auth-header p {
+    font-size: 20px;
+    opacity: 0.95;
+}
+
+.auth-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+}
+
+.auth-circle-left {
+    width: 220px;
+    height: 220px;
+    left: -60px;
+    top: -20px;
+}
+
+.auth-circle-right {
+    width: 200px;
+    height: 200px;
+    right: -70px;
+    bottom: -40px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    margin: -55px auto 0;
+    background: #f7f3ee;
+    border: 3px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 32px 28px;
+    position: relative;
+    z-index: 5;
+    box-shadow: var(--shadow-soft);
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--text-dark);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-soft);
+}
+
+.form-group input {
+    width: 100%;
+    height: 54px;
+    border-radius: 18px;
+    border: 2px solid var(--border);
+    background: #f0e3cb;
+    padding: 0 16px;
+    outline: none;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 18px;
+    color: var(--text-soft);
+}
+
+.auth-switch a {
+    color: var(--primary-dark);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* GENERAL BUTTONS */
+.primary-btn,
+.secondary-btn,
+.logout-btn,
+.add-btn {
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.logout-btn:hover,
+.add-btn:hover {
+    transform: translateY(-1px);
+}
+
+.primary-btn {
+    background: linear-gradient(180deg, #ef7f1a, #d85b05);
+    color: white;
+    border-radius: 18px;
+    padding: 14px 20px;
+    font-weight: bold;
+}
+
+.secondary-btn {
+    background: #e9ddca;
+    color: var(--text-dark);
+    border-radius: 18px;
+    padding: 14px 20px;
+    font-weight: bold;
+}
+
+.full-btn {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* TODO PAGE */
+.page-shell {
+    min-height: 100vh;
+    background: var(--bg-main);
+}
+
+.hero {
+    position: relative;
+    height: 340px;
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--primary-light));
+    overflow: hidden;
+}
+
+.hero-topbar {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 3;
+}
+
+.logout-icon-btn {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.22);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    font-size: 20px;
+}
+
+.hero-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.17);
+}
+
+.hero-circle-left {
+    width: 220px;
+    height: 220px;
+    left: -60px;
+    top: -30px;
+}
+
+.hero-circle-right {
+    width: 210px;
+    height: 210px;
+    right: -70px;
+    bottom: -50px;
+}
+
+.content-area {
+    max-width: 1100px;
+    margin: -50px auto 40px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.task-panel {
+    background: #f4f0ea;
+    border: 3px solid var(--border);
+    border-radius: 34px;
+    padding: 28px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 28px;
+}
+
+.task-row {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.task-row + .task-row {
+    margin-top: 18px;
+}
+
+.flex-grow {
+    flex: 1;
+    min-width: 220px;
+}
+
+.small-input {
+    min-width: 220px;
+}
+
+.soft-input {
+    height: 64px;
+    border-radius: 20px;
+    border: 3px solid #d9bb83;
+    background: #ecdcbc;
+    padding: 0 18px;
+    font-size: 18px;
+    color: var(--text-dark);
+    outline: none;
+}
+
+.soft-input:focus {
+    border-color: var(--primary);
+}
+
+.add-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #ef7f1a, #d85b05);
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    box-shadow: 0 8px 18px rgba(216, 91, 5, 0.25);
+}
+
+.todo-section {
+    background: transparent;
+}
+
+.section-head {
+    margin-bottom: 14px;
+}
+
+.section-head h2 {
+    font-size: 28px;
+    color: var(--text-dark);
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.todo-card {
+    background: #f7f3ee;
+    border: 2px solid #e3cfac;
+    border-radius: 24px;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.todo-left {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.todo-left input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 6px;
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.todo-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.todo-desc {
+    color: var(--text-soft);
+    margin-bottom: 10px;
+}
+
+.todo-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.todo-date {
+    font-size: 13px;
+    color: #8f7a63;
+    background: #f0e2ca;
+    padding: 6px 10px;
+    border-radius: 999px;
+}
+
+.priority-badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.priority-low {
+    background: #dcecff;
+    color: #2e69b3;
+}
+
+.priority-medium {
+    background: #ffe6c9;
+    color: #b56a15;
+}
+
+.priority-high {
+    background: #ffd9d9;
+    color: #b93838;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.65;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-btn {
+    border: none;
+    background: #eeddbc;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.icon-btn:hover {
+    background: #e6d2ab;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 999;
+}
+
+.custom-modal {
+    width: 92%;
+    max-width: 420px;
+    background: #f7f3ee;
+    border: 3px solid var(--border);
+    border-radius: 28px;
+    padding: 28px;
+    margin: 110px auto;
+    box-shadow: var(--shadow-soft);
+}
+
+.custom-modal h3 {
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.custom-modal input {
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.modal-actions button {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1,
+    .auth-header h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p,
+    .auth-header p {
+        font-size: 16px;
+    }
+
+    .task-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-btn {
+        width: 100%;
+        height: 58px;
+    }
+
+    .small-input,
+    .flex-grow {
+        min-width: 100%;
+    }
+
+    .todo-card {
+        flex-direction: column;
+    }
+
+    .todo-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

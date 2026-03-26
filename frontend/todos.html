@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-shell">
+
+    <header class="hero">
+        <div class="hero-circle hero-circle-left"></div>
+        <div class="hero-circle hero-circle-right"></div>
+
+        <div class="hero-topbar">
+            <button class="logout-icon-btn" onclick="logout()">Çıkış</button>
+        </div>
+
+        <div class="hero-content">
+            <h1>Yapılacaklar 🍂</h1>
+            <p>Görevlerini düzenli ve şık bir şekilde yönet</p>
+        </div>
+    </header>
+
+    <main class="content-area">
+
+        <section class="task-panel">
+            <div class="task-row">
+                <input type="text" id="title" class="soft-input flex-grow" placeholder="🌸 Görev başlığı">
+                <input type="text" id="description" class="soft-input flex-grow" placeholder="📝 Açıklama">
+                <button class="add-btn" onclick="addTodo()">+</button>
+            </div>
+        </section>
+
+        <section class="todo-section">
+            <div class="section-head">
+                <h2>Görev Listesi</h2>
+            </div>
+
+            <div id="todoList" class="todo-list"></div>
+        </section>
+
+    </main>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content custom-modal">
+        <h3>Görev Güncelle</h3>
+
+        <input type="text" id="editTitle" class="soft-input" placeholder="Başlık">
+        <input type="text" id="editDesc" class="soft-input" placeholder="Açıklama">
+
+        <div class="modal-actions">
+            <button class="primary-btn" onclick="saveUpdate()">Kaydet</button>
+            <button class="secondary-btn" onclick="closeModal()">İptal</button>
+        </div>
+    </div>
+</div>
+
+<script src="todos.js"></script>
+</body>
+</html>

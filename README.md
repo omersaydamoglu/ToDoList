@@ -18,20 +18,20 @@ In addition to software development, this project demonstrates teamwork, project
 
 - Ömer Saydamoğlı – Project Manager & Frontend Developer
 - Nazlım Aynacı – Backend Developer
-- Talha Soydaş – System Analyst & Integration Developer  
+- Talha Soydaş – System Analyst & Integration Developer
 
 ---
 
 ## 🛠 Technologies Used
 
-- HTML  
-- CSS  
-- JavaScript  
-- GitHub (Version Control)  
-- Jira (Task Management)  
-- Google Teams (Communication)  
+- HTML
+- CSS
+- JavaScript
+- GitHub (Version Control)
+- Jira (Task Management)
+- Google Teams (Communication)
 - Draw.io / PlantUML (UML Diagram)
--  Spring Boot 
+-  Spring Boot
 -  MySQL (Database)
 -  Hibernate (JPA)
 
@@ -40,8 +40,8 @@ In addition to software development, this project demonstrates teamwork, project
 ## 📋 Project Management
 
 All team members created:
-- One Jira account  
-- One Google Teams account  
+- One Jira account
+- One Google Teams account
 
 The instructor has been added as a **Watcher** in Jira.
 
@@ -52,52 +52,52 @@ All task distribution, sprint planning, and progress tracking are managed via Ji
 ## 🗓 Project Timeline
 
 🗓 Week 1 – Planning & Setup
-	•	Project idea finalization
-	•	Role distribution
-	•	Jira setup
-	•	Git repository creation on GitHub
-	•	Project structure planning
+•	Project idea finalization
+•	Role distribution
+•	Jira setup
+•	Git repository creation on GitHub
+•	Project structure planning
 
 ⸻
 
 🗓 Week 2 – Backend Foundation
-	•	Spring Boot project setup
-	•	Database configuration (MySQL)
-	•	Entity classes (User, Task)
-	•	Repository layer implementation
+•	Spring Boot project setup
+•	Database configuration (MySQL)
+•	Entity classes (User, Task)
+•	Repository layer implementation
 
 ⸻
 
 🗓 Week 3 – Backend Development
-	•	CRUD API development
-	•	Login & Register endpoints
-	•	Basic authentication setup
-	•	API testing with Postman
+•	CRUD API development
+•	Login & Register endpoints
+•	Basic authentication setup
+•	API testing with Postman
 
 ⸻
 
 🗓 Week 4 – Frontend Development
-	•	UI design
-	•	Login/Register pages
-	•	Task list page
-	•	Connecting frontend to backend APIs
+•	UI design
+•	Login/Register pages
+•	Task list page
+•	Connecting frontend to backend APIs
 
 ⸻
 
 🗓 Week 5 – Integration & Testing
-	•	Frontend–Backend integration
-	•	System testing
-	•	Bug fixing
-	•	Jira issue tracking updates
+•	Frontend–Backend integration
+•	System testing
+•	Bug fixing
+•	Jira issue tracking updates
 
 ⸻
 
 🗓 Week 6 – Finalization & Submission
-	•	Final testing
-	•	UML diagram completion
-	•	Documentation writing
-	•	Final upload to GitHub
-	•	Submission on UBIS
+•	Final testing
+•	UML diagram completion
+•	Documentation writing
+•	Final upload to GitHub
+•	Submission on UBIS
 
 ---
 
@@ -112,8 +112,8 @@ All task distribution, sprint planning, and progress tracking are managed via Ji
 6 Weeks
 
 ### 🕒 Estimated Workload
-- 40 hours per member  
-- Total: 120 hours  
+- 40 hours per member
+- Total: 120 hours
 
 Detailed resource, time, and member planning is provided in the attached Excel document.
 
@@ -143,11 +143,11 @@ For the project evaluation assignment, a detailed project analysis document was 
 
 This document includes:
 
-- ⚠️ Risk Analysis  
-- 📉 Risk Assessment  
-- 🛡 Risk Mitigation  
-- 📋 Validation and Testing Plan  
-- ✅ Success Criteria  
+- ⚠️ Risk Analysis
+- 📉 Risk Assessment
+- 🛡 Risk Mitigation
+- 📋 Validation and Testing Plan
+- ✅ Success Criteria
 
 You can access the full document here:
 

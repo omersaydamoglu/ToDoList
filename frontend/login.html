@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-page">
+    <div class="auth-top">
+        <div class="auth-circle auth-circle-left"></div>
+        <div class="auth-circle auth-circle-right"></div>
+
+        <div class="auth-header">
+            <h1>Yapılacaklar 🍂</h1>
+            <p>Hesabına giriş yap</p>
+        </div>
+    </div>
+
+    <div class="auth-card">
+        <h2>Login</h2>
+
+        <div class="form-group">
+            <label>Kullanıcı Adı</label>
+            <input type="text" id="username" placeholder="Kullanıcı adını gir">
+        </div>
+
+        <div class="form-group">
+            <label>Şifre</label>
+            <input type="password" id="password" placeholder="Şifreni gir">
+        </div>
+
+        <button class="primary-btn full-btn" onclick="login()">Giriş Yap</button>
+
+        <p class="auth-switch">
+            Hesabın yok mu? <a href="register.html">Kayıt Ol</a>
+        </p>
+    </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>
