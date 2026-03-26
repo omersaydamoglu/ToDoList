@@ -264,6 +264,7 @@ You can access the full document here:
 
 Project board is available here:
 
+
 👉 https://github.com/omersaydamoglu/ToDoList/projects
 
 ---
@@ -271,3 +272,8 @@ Project board is available here:
 ## 📄 License
 
 This project is developed for educational purposes.
+## 📊 Presentation
+
+You can view the project presentation here:
+
+[Download Presentation](./ToDoPresentation.pdf)
