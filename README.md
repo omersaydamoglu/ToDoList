@@ -22,6 +22,19 @@ In addition to software development, this project demonstrates teamwork, project
 - Frontend–Backend integration
 
 ---
+## 📸 Screenshots
+
+### 🔐 Login Page
+<img width="1901" height="823" alt="Screenshot 2026-03-26 113527" src="https://github.com/user-attachments/assets/54fe5e1c-e66d-4aa4-bf63-aedae298c736" />
+### 📝 Register Page
+<img width="1904" height="836" alt="Screenshot 2026-03-26 113508" src="https://github.com/user-attachments/assets/2034f14b-ce87-4b2f-a9a8-adedf42326af" />
+### 📋 Task Dashboard
+<img width="1893" height="829" alt="Screenshot 2026-03-26 120315" src="https://github.com/user-attachments/assets/18107026-63ef-49bc-873f-c5f19d883445" />
+### ✅ Completed Tasks
+<img width="1877" height="832" alt="Screenshot 2026-03-26 120359" src="https://github.com/user-attachments/assets/3a5dc107-80e6-49fa-88ca-bb043c2ef05c" />
+
+
+
 
 ## 👥 Group Members & Roles
 
@@ -46,19 +59,63 @@ In addition to software development, this project demonstrates teamwork, project
 
 ---
 
-## ⚙️ Installation
+## ▶️ How to Run the Project
 
-### Backend (Spring Boot)
-1. Clone the repository  
-2. Open the project in IntelliJ or Eclipse  
-3. Configure PostgreSQL database  
-4. Run the application  
+### 🔹 Backend (Spring Boot)
 
-### Frontend
-1. Navigate to the frontend folder  
-2. Open `index.html` in your browser  
+1. Clone the repository:
+
+```
+git clone https://github.com/omersaydamoglu/ToDoList.git
+```
+
+2. Open the project in IntelliJ IDEA or Eclipse
+
+3. Configure PostgreSQL:
+
+* Create a database (e.g., `todolist_db`)
+* Update `application.properties`:
+
+```
+spring.datasource.url=jdbc:postgresql://localhost:5432/todolist_db
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
+```
+
+4. Run the application
+
+The backend will start at:
+
+```
+http://localhost:8080
+```
 
 ---
+
+### 🔹 Frontend
+
+1. Navigate to the frontend folder
+2. Open `index.html` in your browser
+
+OR (if using Live Server):
+
+* Right click → Open with Live Server
+
+---
+
+### 🔹 API Testing (Optional)
+
+You can test APIs using:
+
+* Postman
+* Swagger (if configured)
+
+Example endpoints:
+
+* `POST /api/auth/register`
+* `POST /api/auth/login`
+* `GET /api/tasks`
+
 
 ## 📋 Project Management
 
