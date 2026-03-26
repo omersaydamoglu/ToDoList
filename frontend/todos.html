@@ -1,51 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<div class="page-shell">
 
-    <h1>🌿 Yapılacaklar</h1>
+    <header class="hero">
+        <div class="hero-circle hero-circle-left"></div>
+        <div class="hero-circle hero-circle-right"></div>
 
-    <div class="todo-input">
-        <input type="text" id="title" placeholder="Başlık">
-        <input type="text" id="description" placeholder="Açıklama">
+        <div class="hero-topbar">
+            <button class="logout-icon-btn" onclick="logout()">Çıkış</button>
+        </div>
 
-        <select id="priority">
-            <option value="LOW">Düşük</option>
-            <option value="MEDIUM">Orta</option>
-            <option value="HIGH">Yüksek</option>
-        </select>
+        <div class="hero-content">
+            <h1>Yapılacaklar 🍂</h1>
+            <p>Görevlerini düzenli ve şık bir şekilde yönet</p>
+        </div>
+    </header>
 
-        <input type="date" id="date">
+    <main class="content-area">
 
-        <button onclick="addTodo()">+</button>
-    </div>
+        <section class="task-panel">
+            <div class="task-row">
+                <input type="text" id="title" class="soft-input flex-grow" placeholder="🌸 Görev başlığı">
+                <input type="text" id="description" class="soft-input flex-grow" placeholder="📝 Açıklama">
+                <button class="add-btn" onclick="addTodo()">+</button>
+            </div>
+        </section>
 
-    <div id="todoList"></div>
+        <section class="todo-section">
+            <div class="section-head">
+                <h2>Görev Listesi</h2>
+            </div>
 
-    <button class="logout-btn" onclick="logout()">Logout</button>
+            <div id="todoList" class="todo-list"></div>
+        </section>
 
+    </main>
 </div>
 
-<!-- MODAL -->
 <div id="modal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content custom-modal">
         <h3>Görev Güncelle</h3>
 
-        <input type="text" id="editTitle">
-        <input type="text" id="editDesc">
+        <input type="text" id="editTitle" class="soft-input" placeholder="Başlık">
+        <input type="text" id="editDesc" class="soft-input" placeholder="Açıklama">
 
-        <button onclick="saveUpdate()">Kaydet</button>
-        <button onclick="closeModal()">İptal</button>
+        <div class="modal-actions">
+            <button class="primary-btn" onclick="saveUpdate()">Kaydet</button>
+            <button class="secondary-btn" onclick="closeModal()">İptal</button>
+        </div>
     </div>
 </div>
 
 <script src="todos.js"></script>
-
 </body>
 </html>
