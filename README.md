@@ -152,3 +152,10 @@ This document includes:
 You can access the full document here:
 
 👉 [Project Analysis Document](project-analysis.md)
+## 📊 Sprint Board
+
+Although Jira was initially planned for task management, the team managed tasks internally due to time constraints.
+
+Sprint planning and progress tracking were handled through regular communication and predefined weekly milestones.
+
+The project timeline above reflects the sprint structure followed during development.
