@@ -150,6 +150,20 @@ Detailed resource, time, and member planning is provided in the attached Excel d
 
 ---
 
+## 🎬 Demo Plan
+
+The live demo of the project will include:
+
+1. User Registration  
+2. User Login  
+3. Adding a new task  
+4. Updating a task  
+5. Deleting a task  
+6. Marking a task as completed  
+7. Showing GitHub repository  
+8. Showing CI/CD pipeline  
+9. Showing project board
+
 ## ⚙️ CI/CD Pipeline
 
 This project uses GitHub Actions for continuous integration.
@@ -158,9 +172,12 @@ This project uses GitHub Actions for continuous integration.
 - Dependency installation  
 - Basic pipeline execution  
 
-You can check the pipeline in the **Actions** tab of this repository.
+You can check the pipeline in the Actions tab of this repository.
 
----
+CI/CD workflow file:
+
+.github/workflows/ci.yml
+
 
 ## 📂 Repository Information
 
