@@ -32,7 +32,7 @@ In addition to software development, this project demonstrates teamwork, project
 - Google Teams (Communication)
 - Draw.io / PlantUML (UML Diagram)
 -  Spring Boot
--  MySQL (Database)
+-  PostgreSQL (Database)
 -  Hibernate (JPA)
 
 ---
