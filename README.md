@@ -188,7 +188,7 @@ All task distribution, sprint planning, and progress tracking were managed throu
 
 [Proje Planı Excel Dosyası İçin Tıklayın](https://github.com/omersaydamoglu/ToDoList/blob/main/project%20planning.xlsx)
 
-[Proje Bütçe Planlamasını İndirmek İçin Tıklayın (Word)](proje_dokumani.docx)
+[Proje Bütçe Planlamasını İndirmek İçin Tıklayın (Word)](budget%20plan.docx)
 
 ### 👨‍💻 Team Members
 3 Members
