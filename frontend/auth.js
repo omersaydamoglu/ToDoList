@@ -14,8 +14,12 @@ function register() {
             password: password
         })
     })
-        .then(res => res.json())
-        .then(data => {
+        .then(res => res.json().then(data => ({ ok: res.ok, data })))
+        .then(({ ok, data }) => {
+            if (!ok) {
+                alert(data.message || "Kayıt başarısız.");
+                return;
+            }
             alert("Register başarılı!");
             window.location.href = "login.html";
         })
@@ -36,9 +40,12 @@ function login() {
             password: password
         })
     })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
+        .then(res => res.json().then(data => ({ ok: res.ok, data })))
+        .then(({ ok, data }) => {
+            if (!ok) {
+                alert(data.message || "Giriş başarısız.");
+                return;
+            }
 
             // TOKEN KAYDET
             localStorage.setItem("token", data.token);
