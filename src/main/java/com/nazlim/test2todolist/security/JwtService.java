@@ -2,6 +2,7 @@ package com.nazlim.test2todolist.security;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
@@ -11,8 +12,11 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    private static final String SECRET = "mysupersecretkeymysupersecretkey"; // en az 32 char
-    private final SecretKey key = Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
+    private final SecretKey key;
+
+    public JwtService(@Value("${jwt.secret}") String secret) {
+        this.key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
+    }
 
     public String generateToken(String username) {
         long oneHourMs = 1000L * 60 * 60;
