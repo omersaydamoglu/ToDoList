@@ -1,21 +1,33 @@
 const BASE_URL = "http://localhost:8080";
 
 let currentId = null;
+let currentFilter = "all";
 
 window.onload = function () {
     getTodos();
 };
 
+function setFilter(filter) {
+    currentFilter = filter;
+
+    document.querySelectorAll(".filter-tab").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.filter === filter);
+    });
+
+    getTodos();
+}
+
 function addTodo() {
     const title = document.getElementById("title").value.trim();
     const description = document.getElementById("description").value.trim();
+    const dueDate = document.getElementById("dueDate").value || null;
 
     if (!title) {
         alert("Görev başlığı boş olamaz.");
         return;
     }
 
-    fetch(`${BASE_URL}/api/todos/add`, {
+    fetch(`${BASE_URL}/api/todos`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -23,7 +35,8 @@ function addTodo() {
         },
         body: JSON.stringify({
             title: title,
-            description: description
+            description: description,
+            dueDate: dueDate
         })
     })
         .then(res => {
@@ -36,6 +49,7 @@ function addTodo() {
         .finally(() => {
             document.getElementById("title").value = "";
             document.getElementById("description").value = "";
+            document.getElementById("dueDate").value = "";
             getTodos();
         });
 }
@@ -53,10 +67,18 @@ function getTodos() {
             return res.json();
         })
         .then(data => {
+            updateCounter(data);
+
+            const visible = data.filter(todo => {
+                if (currentFilter === "active") return !todo.completed;
+                if (currentFilter === "completed") return todo.completed;
+                return true;
+            });
+
             const list = document.getElementById("todoList");
             list.innerHTML = "";
 
-            data.forEach(todo => {
+            visible.forEach(todo => {
                 list.innerHTML += `
                 <div class="todo-card">
                     <div class="todo-left">
@@ -72,6 +94,8 @@ function getTodos() {
                             <div class="todo-desc ${todo.completed ? "completed" : ""}">
                                 ${todo.description || ""}
                             </div>
+
+                            ${dueDateBadge(todo)}
                         </div>
                     </div>
 
@@ -86,6 +110,30 @@ function getTodos() {
         .catch(err => {
             console.error(err);
         });
+}
+
+function dueDateBadge(todo) {
+    if (!todo.dueDate) return "";
+
+    const today = new Date().toISOString().split("T")[0];
+    const isOverdue = !todo.completed && todo.dueDate < today;
+
+    const [year, month, day] = todo.dueDate.split("-");
+    const formatted = `${day}.${month}.${year}`;
+
+    return `
+        <div class="todo-meta">
+            <span class="todo-date ${isOverdue ? "overdue" : ""}">
+                📅 ${formatted}${isOverdue ? " (süresi geçti)" : ""}
+            </span>
+        </div>
+    `;
+}
+
+function updateCounter(todos) {
+    const remaining = todos.filter(t => !t.completed).length;
+    document.getElementById("todoCounter").textContent =
+        `${remaining} görev kaldı`;
 }
 
 function deleteTodo(id) {
@@ -117,6 +165,7 @@ function openModal(todo) {
     currentId = todo.id;
     document.getElementById("editTitle").value = todo.title || "";
     document.getElementById("editDesc").value = todo.description || "";
+    document.getElementById("editDueDate").value = todo.dueDate || "";
     document.getElementById("modal").style.display = "block";
 }
 
@@ -143,7 +192,8 @@ function saveUpdate() {
                 body: JSON.stringify({
                     ...currentTodo,
                     title: document.getElementById("editTitle").value,
-                    description: document.getElementById("editDesc").value
+                    description: document.getElementById("editDesc").value,
+                    dueDate: document.getElementById("editDueDate").value || null
                 })
             });
         })

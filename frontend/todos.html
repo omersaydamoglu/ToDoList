@@ -30,6 +30,7 @@
             <div class="task-row">
                 <input type="text" id="title" class="soft-input flex-grow" placeholder="🌸 Görev başlığı">
                 <input type="text" id="description" class="soft-input flex-grow" placeholder="📝 Açıklama">
+                <input type="date" id="dueDate" class="soft-input small-input">
                 <button class="add-btn" onclick="addTodo()">+</button>
             </div>
         </section>
@@ -37,6 +38,13 @@
         <section class="todo-section">
             <div class="section-head">
                 <h2>Görev Listesi</h2>
+                <span id="todoCounter" class="todo-counter"></span>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all" onclick="setFilter('all')">Tümü</button>
+                <button class="filter-tab" data-filter="active" onclick="setFilter('active')">Aktif</button>
+                <button class="filter-tab" data-filter="completed" onclick="setFilter('completed')">Tamamlanan</button>
             </div>
 
             <div id="todoList" class="todo-list"></div>
@@ -51,6 +59,7 @@
 
         <input type="text" id="editTitle" class="soft-input" placeholder="Başlık">
         <input type="text" id="editDesc" class="soft-input" placeholder="Açıklama">
+        <input type="date" id="editDueDate" class="soft-input">
 
         <div class="modal-actions">
             <button class="primary-btn" onclick="saveUpdate()">Kaydet</button>

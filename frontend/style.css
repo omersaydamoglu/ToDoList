@@ -322,11 +322,50 @@ body {
 
 .section-head {
     margin-bottom: 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .section-head h2 {
     font-size: 28px;
     color: var(--text-dark);
+}
+
+.todo-counter {
+    font-size: 15px;
+    color: var(--text-soft);
+    font-weight: 600;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.filter-tab {
+    border: 2px solid var(--border);
+    background: #f0e3cb;
+    color: var(--text-dark);
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filter-tab:hover {
+    background: #e6d2ab;
+}
+
+.filter-tab.active {
+    background: linear-gradient(180deg, #ef7f1a, #d85b05);
+    border-color: transparent;
+    color: white;
 }
 
 .todo-list {
@@ -388,6 +427,12 @@ body {
     background: #f0e2ca;
     padding: 6px 10px;
     border-radius: 999px;
+}
+
+.todo-date.overdue {
+    color: #b93838;
+    background: #ffd9d9;
+    font-weight: bold;
 }
 
 .priority-badge {

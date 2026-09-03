@@ -3,6 +3,8 @@ package com.nazlim.test2todolist.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
+import java.time.LocalDate;
+
 public class TodoRequest {
     @NotBlank
     @Size(max = 100)
@@ -13,6 +15,8 @@ public class TodoRequest {
 
     private boolean completed;
 
+    private LocalDate dueDate;
+
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
 
@@ -21,4 +25,7 @@ public class TodoRequest {
 
     public boolean isCompleted() { return completed; }
     public void setCompleted(boolean completed) { this.completed = completed; }
+
+    public LocalDate getDueDate() { return dueDate; }
+    public void setDueDate(LocalDate dueDate) { this.dueDate = dueDate; }
 }
