@@ -26,16 +26,19 @@ public class Todo {
     private boolean completed;
 
     private LocalDate dueDate;
+    private String priority;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private AppUser user;
 
-    public Todo(Long id, String title, String description, boolean completed) {
+    public Todo(Long id, String title, String description, boolean completed, LocalDate dueDate, String priority) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.completed = completed;
+        this.dueDate= dueDate;
+        this.priority=priority;
 
     }
 
@@ -76,7 +79,12 @@ public class Todo {
     public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
-
+    public String getPriority(){
+        return priority;
+    }
+    public void setPriority(String priority){
+        this.priority=priority;
+    }
     public AppUser getUser() {
         return user;
     }

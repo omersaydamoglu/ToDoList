@@ -12,6 +12,7 @@ public class TodoMapper {
         t.setDescription(req.getDescription());
         t.setCompleted(req.isCompleted());
         t.setDueDate(req.getDueDate());
+        t.setPriority(req.getPriority());
         return t;
     }
 
@@ -21,7 +22,8 @@ public class TodoMapper {
                 todo.getTitle(),
                 todo.getDescription(),
                 todo.isCompleted(),
-                todo.getDueDate()
+                todo.getDueDate(),
+                todo.getPriority()
         );
     }
 }

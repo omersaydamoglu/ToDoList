@@ -68,6 +68,7 @@ public class TodoServiceImpl implements TodoService {
         existing.setDescription(request.getDescription());
         existing.setCompleted(request.isCompleted());
         existing.setDueDate(request.getDueDate());
+        existing.setPriority(request.getPriority());
 
         Todo saved = repo.save(existing);
         return TodoMapper.toResponse(saved);

@@ -31,6 +31,11 @@
                 <input type="text" id="title" class="soft-input flex-grow" placeholder="🌸 Görev başlığı">
                 <input type="text" id="description" class="soft-input flex-grow" placeholder="📝 Açıklama">
                 <input type="date" id="dueDate" class="soft-input small-input">
+                <select id="priority" class="soft-input small-input">
+                    <option value="low">Düşük</option>
+                    <option value="medium">Orta</option>
+                    <option value="high">Yüksek</option>
+                </select>
                 <button class="add-btn" onclick="addTodo()">+</button>
             </div>
         </section>
@@ -60,6 +65,12 @@
         <input type="text" id="editTitle" class="soft-input" placeholder="Başlık">
         <input type="text" id="editDesc" class="soft-input" placeholder="Açıklama">
         <input type="date" id="editDueDate" class="soft-input">
+        <select id="editPriority" class="soft-input">
+            <option value="low">Düşük</option>
+            <option value="medium">Orta</option>
+            <option value="high">Yüksek</option>
+        </select>
+
 
         <div class="modal-actions">
             <button class="primary-btn" onclick="saveUpdate()">Kaydet</button>

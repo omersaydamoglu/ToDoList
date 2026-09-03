@@ -21,6 +21,7 @@ function addTodo() {
     const title = document.getElementById("title").value.trim();
     const description = document.getElementById("description").value.trim();
     const dueDate = document.getElementById("dueDate").value || null;
+    const priority = document.getElementById("priority").value;
 
     if (!title) {
         alert("Görev başlığı boş olamaz.");
@@ -36,7 +37,8 @@ function addTodo() {
         body: JSON.stringify({
             title: title,
             description: description,
-            dueDate: dueDate
+            dueDate: dueDate,
+            priority: priority
         })
     })
         .then(res => {
@@ -96,6 +98,7 @@ function getTodos() {
                             </div>
 
                             ${dueDateBadge(todo)}
+                            ${priorityBadge(todo)}
                         </div>
                     </div>
 
@@ -126,6 +129,19 @@ function dueDateBadge(todo) {
             <span class="todo-date ${isOverdue ? "overdue" : ""}">
                 📅 ${formatted}${isOverdue ? " (süresi geçti)" : ""}
             </span>
+        </div>
+    `;
+}
+
+function priorityBadge(todo) {
+    if (!todo.priority) return "";
+
+    const labels = { low: "Düşük", medium: "Orta", high: "Yüksek" };
+    const label = labels[todo.priority] || todo.priority;
+
+    return `
+        <div class="todo-meta">
+            <span class="priority-badge priority-${todo.priority}">${label}</span>
         </div>
     `;
 }
@@ -166,6 +182,7 @@ function openModal(todo) {
     document.getElementById("editTitle").value = todo.title || "";
     document.getElementById("editDesc").value = todo.description || "";
     document.getElementById("editDueDate").value = todo.dueDate || "";
+    document.getElementById("editPriority").value = todo.priority || "low";
     document.getElementById("modal").style.display = "block";
 }
 
@@ -193,7 +210,8 @@ function saveUpdate() {
                     ...currentTodo,
                     title: document.getElementById("editTitle").value,
                     description: document.getElementById("editDesc").value,
-                    dueDate: document.getElementById("editDueDate").value || null
+                    dueDate: document.getElementById("editDueDate").value || null,
+                    priority: document.getElementById("editPriority").value
                 })
             });
         })

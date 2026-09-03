@@ -17,6 +17,16 @@ public class TodoRequest {
 
     private LocalDate dueDate;
 
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+    private String priority;
+
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
 
